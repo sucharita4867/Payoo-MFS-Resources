@@ -17,21 +17,42 @@
       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
       <!-- Tailwind Css CDN -->
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- font-awesome CDN -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="outfit-font bg-[#F4F5F7] h-[100vh]">
-      <nav class="border border-red-800 min-h-[50px] flex justify-between items-center">
+      <nav class="border-b-1 border-gray-400 p-4 mx-auto min-h-[50px] flex justify-between items-center max-w-lg">
             <div class="flex">
                   <img class="h-[50px]" src="./assets/Group.png" alt="">
                   <div class="ml-3">
                         <h1 class="font-bold">$ <span>45000</span></h1>
-                        <p>Available Balance</p>
+                        <p class="text-[#666768]">Available Balance</p>
                   </div>
             </div>
             <div>
-                  <button class="btn">Default</button>
+                  <button class="btn text-[#666768]">
+                        <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>
+                        Default
+                  </button>
             </div>
       </nav>
+
+      <div class="max-w-lg mx-auto mt-8 p-4">
+            <h1 class="font-bold text-xl">🔥 Welcome to Payooo!</h1>
+            <p class="text-[#666768] mt-1">Enjoy easy and convenient financial services with us. Cashout charge is low
+                  and
+            </p>
+      </div>
+
+      <div class="border-1 border-red-600 grid grid-cols-3 grid-rows-2">
+            <div class="border-2 border-black p-5">
+                  <img class="mx-auto" src="./assets/wallet1.png" alt="">
+                  <h2 class="text-center">Add Money</h2>
+            </div>
+      </div>
 </body>
 
 </html>
