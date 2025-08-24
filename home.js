@@ -5,13 +5,11 @@ function getInputValueNumber(id) {
   const inputFieldValueNumber = parseInt(inputFieldValue);
   return inputFieldValueNumber;
 }
-
 function getInputField(id) {
   const inputField = document.getElementById(id);
   const inputFieldValue = inputField.value;
   return inputFieldValue;
 }
-
 // function to get inner text
 // function getInnerText(id) {
 //   const element = document.getElementById(id);
