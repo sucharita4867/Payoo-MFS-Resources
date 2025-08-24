@@ -29,7 +29,7 @@
                   <div class="flex">
                         <img class="h-[50px]" src="./assets/Group.png" alt="">
                         <div class="ml-3">
-                              <h1 class="font-bold">$ <span id="Balance">45000</span></h1>
+                              <h1 class="font-bold">$ <span id="available-balance">45000</span></h1>
                               <p class="text-[#666768]">Available Balance</p>
                         </div>
                   </div>
@@ -51,7 +51,7 @@
 
             <div class="grid grid-cols-3 gap-4 mt-8 p-4">
                   <div id="add-btn"
-                        class="border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
+                        class="form-btn border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
                         <img class="mx-auto" src="./assets/wallet1.png" alt="">
                         <h2 class="text-[#666768] mt-1">Add Money</h2>
                   </div>
@@ -60,19 +60,23 @@
                         <img class="mx-auto" src="./assets/send1.png" alt="">
                         <h2 class="text-[#666768] text-center mt-1">Cash Out</h2>
                   </div>
-                  <div class="border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
+                  <div id="Transfer-btn"
+                        class="form-btn border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
                         <img class="mx-auto" src="./assets/money1.png" alt="">
                         <h2 class="text-[#666768] text-center mt-1">Transfer Money</h2>
                   </div>
-                  <div class="border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
+                  <div
+                        class="form-btn border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
                         <img class="mx-auto" src="./assets/bonus1.png" alt="">
                         <h2 class="text-[#666768] text-center mt-1">Get Bonus</h2>
                   </div>
-                  <div class="border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
+                  <div
+                        class="form-btn border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
                         <img class="mx-auto" src="./assets/purse1.png" alt="">
                         <h2 class="text-[#666768] text-center mt-1">Pay Bill</h2>
                   </div>
-                  <div class="border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
+                  <div
+                        class="form-btn border-1 border-gray-300 p-4 rounded-xl flex flex-col justify-center items-center">
                         <img class="mx-auto" src="./assets/transaction1.png" alt="">
                         <h2 class="text-[#666768] text-center mt-1">Transactions</h2>
                   </div>
@@ -81,7 +85,7 @@
       <!-- from section -->
       <div class="all-from-section max-w-lg mx-auto">
             <!-- add money -->
-            <div id="add-money-parent">
+            <div class="form" id="add-money-parent">
                   <h1 id="addMoney" class="my-5 font-bold ">Add Money</h1>
                   <form action="" class="p-8 rounded-3xl bg-white">
                         <div class="w-full">
@@ -117,7 +121,7 @@
                   </form>
             </div>
             <!-- cash out -->
-            <div id="cash-out-parent">
+            <div class="form" id="cash-out-parent" style="display: none;">
                   <h1 id="addMoney" class="my-5 font-bold ">Cash Out</h1>
                   <form action="" class="p-8 rounded-3xl bg-white">
                         <div>
@@ -142,6 +146,10 @@
                               class="btn bg-[#0874F2] rounded-3xl text-white w-full mt-5  font-semibold">Withdraw
                               Money</button>
                   </form>
+            </div>
+            <!-- Transfer Money -->
+            <div class="form" id="transfer-parent" style="display: none;">
+                  <h1 id="addMoney" class="my-5 font-bold ">Transfer Money</h1>
             </div>
       </div>
 
