@@ -48,7 +48,6 @@ function handleToggle(id) {
   }
   document.getElementById(id).style.display = "block";
 }
-
 // add Amount
 document
   .getElementById("add-money-btn")
