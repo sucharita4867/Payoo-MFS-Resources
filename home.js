@@ -25,7 +25,6 @@ function setInnerText(value) {
   const availableBalanceElement = document.getElementById("available-balance");
   availableBalanceElement.innerText = value;
 }
-
 // function to toggle btns
 function handleButtonToggle(id) {
   const formBtns = document.getElementsByClassName("form-btn");
@@ -39,7 +38,6 @@ function handleButtonToggle(id) {
     .getElementById(id)
     .classList.add("border-[#0874f2]", "bg-[#0874f20d]");
 }
-
 // function to toggle
 function handleToggle(id) {
   const forms = document.getElementsByClassName("form");
