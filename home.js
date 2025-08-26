@@ -12,6 +12,7 @@ function getInputField(id) {
   const inputFieldValue = inputField.value;
   return inputFieldValue;
 }
+
 // function to get inner text
 // function getInnerText(id) {
 //   const element = document.getElementById(id);
