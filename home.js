@@ -99,16 +99,35 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 });
 
 // toggling feature
+// add money
 document.getElementById("add-btn").addEventListener("click", function () {
   handleToggle("add-money-parent");
   handleButtonToggle("add-btn");
 });
-
+// cash out
 document.getElementById("cash-out-btn").addEventListener("click", function () {
   handleToggle("cash-out-parent");
   handleButtonToggle("cash-out-btn");
 });
-
+// Transfer Money
 document.getElementById("Transfer-btn").addEventListener("click", function () {
   handleToggle("transfer-parent");
+  handleButtonToggle("Transfer-btn");
 });
+// Get Bonus
+document.getElementById("Bonus-btn").addEventListener("click", function () {
+  handleToggle("bonus-parent");
+  handleButtonToggle("Bonus-btn");
+});
+// Pay Bill
+document.getElementById("pay-bill-btn").addEventListener("click", function () {
+  handleToggle("pay-bill-parent");
+  handleButtonToggle("pay-bill-btn");
+});
+// Transactions
+document
+  .getElementById("Transactions-btn")
+  .addEventListener("click", function () {
+    handleToggle("Transactions-parent");
+    handleButtonToggle("Transactions-btn");
+  });
