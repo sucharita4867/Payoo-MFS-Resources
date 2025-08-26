@@ -1,3 +1,5 @@
+const transactionData = [];
+
 // function to get input values
 function getInputValueNumber(id) {
   const inputField = document.getElementById(id);
@@ -52,7 +54,10 @@ document
     const BankName = getInputField("bank");
     const accountNo = document.getElementById("account-no").value;
     const addAmount = getInputValueNumber("add-amount");
-
+    if (addAmount <= 0) {
+      alert("Invalid amount");
+      return;
+    }
     const pinNO = document.getElementById("pin-no").value;
 
     const firstBalance = parseInt(
@@ -71,6 +76,13 @@ document
     let newBalance = addAmount + firstBalance;
     // console.log(addAmount, firstBalance);
     setInnerText(newBalance);
+
+    const data = {
+      name: "Add Money",
+      date: new Date().toLocaleTimeString(),
+    };
+    transactionData.push(data);
+    // console.log(transactionData);
   });
 // cashOut feature
 document.getElementById("withdraw-btn").addEventListener("click", function (e) {
@@ -81,7 +93,10 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   const availableBalance = parseInt(
     document.getElementById("available-balance").innerText
   );
-
+  if (withdrawAmount <= 0 || withdrawAmount > availableBalance) {
+    alert("Invalid amount");
+    return;
+  }
   const pinDisit = document.getElementById("pin-digit").value;
   const agentNumber = document.getElementById("agent-number").value;
   const cashOutPin = "2006";
@@ -96,7 +111,43 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 
   const withdrawValue = withdrawAmount - availableBalance;
   setInnerText(withdrawValue);
+  const data = {
+    name: "Cash Out",
+    date: new Date().toLocaleTimeString(),
+  };
+  transactionData.push(data);
+  // console.log(transactionData);
 });
+
+// transaction page show
+document
+  .getElementById("Transactions-btn")
+  .addEventListener("click", function () {
+    const transactionContainer = document.getElementById(
+      "transaction-container"
+    );
+    transactionContainer.innerHTML = "";
+    for (const data of transactionData) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+      <div class="bg-white rounded-xl p-3 border border-gray-200 flex justify-between items-center">
+                              <div class="rounded-xl flex items-center gap-3 mt-3">
+                                    <figure class="p-3 rounded-full bg-[#F4F5F7] ">
+                                          <img class="mx-auto" src="./assets/wallet1.png" alt="">
+                                    </figure>
+                                    <div>
+                                          <h1 class="font-semibold text-gray-600">${data.name}</h1>
+                                          <p class="text-gray-500">${data.date}</p>
+                                    </div>
+                              </div>
+                              <div>
+                                    <i class="fa-solid fa-ellipsis-vertical text-gray-600"></i>
+                              </div>
+                        </div>
+      `;
+      transactionContainer.appendChild(div);
+    }
+  });
 
 // toggling feature
 // add money
